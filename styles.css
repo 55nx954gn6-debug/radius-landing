@@ -69,7 +69,7 @@ a { color: inherit; text-decoration: none; }
 .secondary, .ghost { background: rgba(255,255,255,.07); color: var(--text); }
 
 .hero {
-  min-height: 780px;
+  min-height: 740px;
   display: grid;
   grid-template-columns: 1.05fr .95fr;
   gap: 64px;
@@ -86,13 +86,15 @@ a { color: inherit; text-decoration: none; }
 h1, h2, h3, p { margin-top: 0; }
 h1 {
   font-family: "Instrument Serif", Georgia, serif;
-  font-size: clamp(72px, 12vw, 154px);
-  line-height: .78;
-  letter-spacing: -0.075em;
+  font-size: clamp(64px, 9.5vw, 126px);
+  line-height: .84;
+  letter-spacing: -0.068em;
   margin-bottom: 30px;
 }
 .lead { font-size: clamp(20px, 3vw, 28px); line-height: 1.26; color: rgba(247,243,234,.84); max-width: 720px; }
 .actions { display: flex; gap: 14px; flex-wrap: wrap; margin-top: 34px; }
+.proof-strip { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 24px; }
+.proof-strip span { border: 1px solid var(--line); background: rgba(255,255,255,.07); color: var(--muted); border-radius: 999px; padding: 9px 12px; font-size: 13px; font-weight: 800; }
 
 .phone-card {
   width: min(390px, 100%);
@@ -123,6 +125,11 @@ h1 {
 .one { left: 50%; top: 48%; } .two { left: 28%; top: 30%; background: var(--blue); } .three { right: 24%; bottom: 28%; background: var(--rose); }
 .card-row { display: flex; justify-content: space-between; align-items: center; padding: 16px 18px; margin-top: 10px; background: rgba(255,255,255,.08); border: 1px solid var(--line); border-radius: 18px; position: relative; z-index: 1; }
 .card-row span { color: var(--muted); }
+.signal-card { position: relative; z-index: 1; padding: 16px; border-radius: 22px; border: 1px solid rgba(244,199,107,.28); background: rgba(244,199,107,.10); margin-bottom: 18px; }
+.signal-card div { display: grid; gap: 6px; }
+.signal-card strong { font-size: 17px; }
+.signal-card span, .signal-card em { color: var(--muted); font-style: normal; line-height: 1.35; }
+.signal-card em { display: block; margin-top: 12px; color: var(--gold); font-weight: 800; font-size: 13px; }
 
 .logos-section, .feature-grid, .cta { margin: 28px 0 90px; }
 .logo-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-top: 18px; }
@@ -134,6 +141,18 @@ h1 {
 .feature-grid span { color: var(--gold); font-weight: 800; }
 .feature-grid h3 { font-size: 28px; line-height: 1; letter-spacing: -.045em; margin: 18px 0 12px; }
 .feature-grid p, .cta p { color: var(--muted); line-height: 1.6; }
+.section-block { border: 1px solid var(--line); background: rgba(255,255,255,.07); border-radius: 34px; padding: clamp(28px, 5vw, 48px); margin: 28px 0 90px; }
+.section-block h2 { font-family: "Instrument Serif", Georgia, serif; font-size: clamp(46px, 7vw, 84px); line-height: .9; letter-spacing: -.06em; margin: 8px 0 18px; }
+.section-block p { color: var(--muted); line-height: 1.65; font-size: 18px; }
+.split-block { display: grid; grid-template-columns: .9fr 1.1fr; gap: 42px; align-items: center; }
+.feature-list { display: grid; gap: 12px; }
+.feature-list div, .launch-checklist span { display: grid; gap: 5px; border: 1px solid var(--line); border-radius: 22px; padding: 18px; background: rgba(0,0,0,.16); }
+.feature-list strong { font-size: 18px; }
+.feature-list span { color: var(--muted); line-height: 1.45; }
+.product-grid { margin-top: 28px; }
+.launch-block { display: grid; grid-template-columns: 1.1fr .9fr; gap: 36px; align-items: center; }
+.launch-checklist { display: grid; gap: 10px; }
+.launch-checklist span { color: rgba(247,243,234,.86); font-weight: 800; }
 .cta { text-align: center; padding: 56px 28px; margin-bottom: 60px; }
 .cta h2 { font-family: "Instrument Serif", Georgia, serif; font-size: clamp(48px, 7vw, 86px); line-height: .9; letter-spacing: -.06em; margin-bottom: 18px; }
 .cta p { max-width: 660px; margin: 0 auto 26px; font-size: 18px; }
@@ -186,6 +205,7 @@ h1 {
   .nav-links a:not(.button) { display: none; }
   .hero { grid-template-columns: 1fr; min-height: auto; padding-top: 48px; gap: 44px; }
   .phone-card { transform: none; }
-  .logo-grid, .feature-grid { grid-template-columns: 1fr; }
-  h1 { font-size: clamp(82px, 22vw, 128px); }
+  .logo-grid, .feature-grid, .split-block, .launch-block { grid-template-columns: 1fr; }
+  h1 { font-size: clamp(72px, 18vw, 118px); }
+  .section-block { margin-bottom: 52px; }
 }
