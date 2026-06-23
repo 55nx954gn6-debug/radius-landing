@@ -28,14 +28,35 @@ body {
 body::before {
   content: "";
   position: fixed;
-  inset: 0;
+  inset: -18% -12% auto auto;
+  width: min(920px, 118vw);
+  height: min(1180px, 150vh);
   pointer-events: none;
   background-image: url("assets/radius-image2-bg.jpg");
-  background-size: min(820px, 96vw) auto;
-  background-position: right -270px top -240px;
+  background-size: cover;
+  background-position: center;
   background-repeat: no-repeat;
-  opacity: .12;
+  opacity: .16;
   mix-blend-mode: multiply;
+  transform: rotate(-8deg);
+  border-radius: 48%;
+  mask-image: radial-gradient(circle at 58% 38%, black 0 42%, rgba(0,0,0,.55) 58%, transparent 74%);
+}
+body::after {
+  content: "";
+  position: fixed;
+  inset: auto auto -34% -20%;
+  width: min(720px, 100vw);
+  height: min(840px, 95vh);
+  pointer-events: none;
+  background-image: url("assets/radius-image2-bg.jpg");
+  background-size: cover;
+  background-position: center;
+  opacity: .075;
+  mix-blend-mode: multiply;
+  transform: rotate(18deg);
+  border-radius: 50%;
+  mask-image: radial-gradient(circle, black 0 35%, transparent 72%);
 }
 
 a { color: inherit; text-decoration: none; }
@@ -62,12 +83,12 @@ a { color: inherit; text-decoration: none; }
 .nav-contact { color: var(--body); font-size: 14px; font-weight: 800; }
 
 .hero {
-  min-height: 670px;
-  display: grid;
-  grid-template-columns: 1.08fr .92fr;
-  gap: clamp(34px, 7vw, 86px);
-  align-items: center;
-  padding: 42px 0 76px;
+  min-height: 640px;
+  max-width: 820px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 58px 0 92px;
 }
 .eyebrow {
   color: var(--mineral-deep);
@@ -108,30 +129,6 @@ h1 {
 .primary { background: var(--mineral); border-color: var(--mineral); color: white; box-shadow: 0 18px 44px rgba(63,122,169,.24); }
 .secondary { background: rgba(253,253,253,.68); color: var(--ink); }
 
-.signal-field {
-  margin: 0;
-  border-radius: 42px;
-  padding: 14px;
-  background: rgba(253,253,253,.70);
-  border: 1px solid var(--line);
-  box-shadow: var(--shadow);
-  transform: rotate(1.25deg);
-  overflow: hidden;
-}
-.signal-field img {
-  display: block;
-  width: 100%;
-  aspect-ratio: 4 / 5;
-  object-fit: cover;
-  border-radius: 31px;
-}
-.signal-field figcaption {
-  padding: 16px 4px 3px;
-  color: var(--body);
-  font-weight: 800;
-  line-height: 1.25;
-}
-
 .identity {
   max-width: 850px;
   margin: 0 auto 54px;
@@ -141,6 +138,7 @@ h1 {
   border-radius: 34px;
   padding: clamp(30px, 6vw, 58px);
   box-shadow: 0 20px 64px rgba(28,39,52,.07);
+  backdrop-filter: blur(10px);
 }
 .identity h2 {
   font-family: "Instrument Serif", Georgia, serif;
@@ -171,6 +169,7 @@ h1 {
   padding: clamp(28px, 5vw, 58px);
   margin: 34px 0 72px;
   box-shadow: var(--shadow);
+  backdrop-filter: blur(10px);
 }
 .legal-card h1 { font-size: clamp(56px, 8vw, 92px); line-height: .96; letter-spacing: -.038em; margin: 10px 0 26px; }
 .legal-card h2 { margin: 36px 0 12px; font-size: clamp(26px, 4vw, 38px); line-height: 1; letter-spacing: -.045em; }
@@ -182,8 +181,8 @@ h1 {
 
 @media (max-width: 840px) {
   .site-shell { width: min(100% - 24px, 680px); }
-  body::before { background-position: center -190px; opacity: .10; }
-  .hero { grid-template-columns: 1fr; min-height: auto; padding-top: 38px; }
-  .signal-field { transform: none; }
+  body::before { inset: -12% -66% auto auto; width: 980px; height: 980px; opacity: .13; }
+  body::after { display: none; }
+  .hero { min-height: auto; padding: 92px 0 72px; }
   h1 { font-size: clamp(58px, 15vw, 92px); }
 }
