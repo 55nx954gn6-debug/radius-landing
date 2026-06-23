@@ -4,9 +4,9 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Radius — Real-world connection, closer.</title>
-  <meta name="description" content="Radius is an iPhone app for trusted communities: nearby Signals, practical help, community discovery, and real-world belonging without the noise of social media." />
+  <meta name="description" content="Radius is an iPhone app for trusted local communities: nearby Signals, practical help, and real-world connection without a noisy public feed." />
   <meta property="og:title" content="Radius — Real-world connection, closer." />
-  <meta property="og:description" content="A warm, privacy-minded community app for nearby Signals, Goodwill requests, group discovery, and real-world connection." />
+  <meta property="og:description" content="Nearby Signals for trusted communities." />
   <meta property="og:image" content="https://www.radius-app.org/assets/radius-icon-image2.png" />
   <meta property="og:type" content="website" />
   <link rel="icon" href="assets/radius-icon-image2.png" />
@@ -16,115 +16,64 @@
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <main>
+  <main class="site-shell">
     <nav class="nav" aria-label="Primary">
-      <a class="brand" href="#top" aria-label="Radius home">
+      <a class="brand" href="/" aria-label="Radius home">
         <img src="assets/radius-icon-image2.png" alt="" />
         <span>Radius</span>
       </a>
-      <div class="nav-links">
-        <a href="#signals">Signals</a>
-        <a href="#trust">Trust</a>
-        <a href="#pilot">Pilot</a>
-        <a href="/support">Support</a>
-        <a class="button ghost" href="mailto:hello@radius-app.org?subject=Radius%20pilot%20interest">Start a pilot</a>
-      </div>
+      <a class="nav-contact" href="mailto:hello@radius-app.org?subject=Radius%20pilot%20interest">Contact</a>
     </nav>
 
-    <section id="top" class="hero">
+    <section class="hero" aria-labelledby="hero-title">
       <div class="hero-copy">
-        <p class="eyebrow">Private iPhone pilots opening</p>
-        <h1>Real-world connection, closer.</h1>
-        <p class="lead">Radius helps trusted communities turn nearby intent into actual connection — a walk, a serve day, a dinner, a small group, a practical ask — without becoming another noisy social feed.</p>
-        <div class="actions">
+        <p class="eyebrow">Private iPhone pilots</p>
+        <h1 id="hero-title">Real-world connection, closer.</h1>
+        <p class="lead">Radius helps trusted local communities turn nearby intent into actual connection — a walk, a meal, a serve day, a practical ask.</p>
+        <div class="hero-actions">
           <a class="button primary" href="mailto:hello@radius-app.org?subject=Radius%20pilot%20interest">Start a pilot</a>
-          <a class="button secondary" href="#signals">See the product shape</a>
-        </div>
-        <div class="proof-strip" aria-label="Radius product status">
-          <span>Nearby Signals</span>
-          <span>Community-scoped feeds</span>
-          <span>Approximate location</span>
-          <span>Reports · blocks · moderation</span>
+          <a class="button secondary" href="/support">Support</a>
         </div>
       </div>
 
-      <div class="device-stage" aria-label="Radius preview">
-        <div class="phone-shell">
-          <div class="phone-top"></div>
-          <div class="app-screen image2-screen">
-            <img class="app-icon" src="assets/radius-icon-image2.png" alt="Radius icon" />
-            <p class="small-label">Nearby Signal</p>
-            <h2>Who’s in for something real?</h2>
-            <div class="mini-signal">
-              <strong>Family picnic Sunday</strong>
-              <span>Kids can run around while parents meet each other.</span>
-              <em>Community · 1.2 mi</em>
-            </div>
-            <div class="radius-map" aria-hidden="true">
-              <span class="pulse p1"></span>
-              <span class="pulse p2"></span>
-              <span class="pulse p3"></span>
-              <span class="center-dot"></span>
-            </div>
-            <div class="mini-row"><span>Prayer walk</span><strong>Sat 9a</strong></div>
-            <div class="mini-row"><span>Need help moving a couch</span><strong>Goodwill</strong></div>
-          </div>
-        </div>
+      <figure class="identity-card" aria-label="Radius identity preview">
+        <img class="identity-bg" src="assets/radius-image2-bg.jpg" alt="" />
+        <figcaption>
+          <img src="assets/radius-icon-image2.png" alt="Radius icon" />
+          <span>Nearby Signals for trusted communities.</span>
+        </figcaption>
+      </figure>
+    </section>
+
+    <section class="needed" aria-labelledby="needed-title">
+      <p class="eyebrow">What Radius is</p>
+      <h2 id="needed-title">A quieter layer for belonging.</h2>
+      <div class="needed-grid">
+        <article>
+          <h3>Signals</h3>
+          <p>Lightweight posts for what is happening, who is in, or where help is needed.</p>
+        </article>
+        <article>
+          <h3>Local context</h3>
+          <p>Community-scoped discovery with approximate location and human-scale visibility.</p>
+        </article>
+        <article>
+          <h3>Trust</h3>
+          <p>Bounded communities, reporting, blocking, and support paths instead of public virality.</p>
+        </article>
       </div>
     </section>
 
-    <section id="signals" class="section-block split-block">
-      <div>
-        <p class="section-kicker">Current product direction</p>
-        <h2>Signals are the lightweight language of “who’s in?”</h2>
-        <p>Members can post what they are doing, where help is needed, or what is happening soon. Radius keeps the surface intentionally local, timely, and human-scale.</p>
-      </div>
-      <div class="feature-list">
-        <div><strong>Community Signals</strong><span>Serve projects, family picnics, walks, pickup games, coffee, board games, small groups, and local meetups.</span></div>
-        <div><strong>Goodwill requests</strong><span>Practical “could someone help?” moments routed through trusted community context instead of awkward broadcast texts.</span></div>
-        <div><strong>Event timing</strong><span>Signals can carry dates, expiration windows, attendee state, and calendar handoff when the moment needs structure.</span></div>
-        <div><strong>Feed + map discovery</strong><span>Browse community or nearby Signals with radius controls, search, and map/list surfaces.</span></div>
-      </div>
-    </section>
-
-    <section id="trust" class="section-block trust-block">
-      <div class="trust-copy">
-        <p class="section-kicker">Designed for trust</p>
-        <h2>Belonging without public virality.</h2>
-        <p>Radius is built around bounded communities, approximate location, intentional visibility, reporting, block/mute controls, and support paths. The point is presence, not engagement theater.</p>
-      </div>
-      <div class="trust-cards">
-        <article><span>01</span><h3>Approximate by default</h3><p>General-area discovery instead of exact public tracking.</p></article>
-        <article><span>02</span><h3>Community first</h3><p>Branded onboarding, join flow, and community context without naming pilot partners publicly.</p></article>
-        <article><span>03</span><h3>Safety controls</h3><p>Signal reports, blocks, mutes, admin routing, and support surfaces.</p></article>
-      </div>
-    </section>
-
-    <section id="pilot" class="section-block pilot-block">
-      <div>
-        <p class="eyebrow">Pilot package</p>
-        <h2>Enough product to pilot. Honest enough to improve fast.</h2>
-        <p>Radius can be prepared for a real community with branded onboarding, initial Signal ideas, QR/community entry points, legal/support pages, and an App Store-ready install path.</p>
-      </div>
-      <div class="launch-checklist">
-        <span>✓ iOS app foundation</span>
-        <span>✓ Community join/skip flow</span>
-        <span>✓ Signal composer + feed</span>
-        <span>✓ Support, privacy, terms</span>
-        <span>Next: stable production API hosting</span>
-      </div>
-    </section>
-
-    <section class="cta">
-      <p class="eyebrow">For community leaders</p>
-      <h2>Want Radius for your community?</h2>
-      <p>We’re selectively onboarding pilot partners. Tell us who you serve, what connection problem you want solved, and what a successful first month would look like.</p>
+    <section class="pilot" aria-labelledby="pilot-title">
+      <p class="eyebrow">What is needed now</p>
+      <h2 id="pilot-title">A credible pilot, not a marketing wall.</h2>
+      <p>Radius is ready to present as a real product when the installation path, production API, and first community pilot are clean. The website only needs to establish the identity and give leaders a way to start the conversation.</p>
       <a class="button primary" href="mailto:hello@radius-app.org?subject=Radius%20pilot%20interest">Contact Radius</a>
     </section>
 
     <footer class="footer">
-      <a href="/privacy">Privacy Policy</a>
-      <a href="/terms">Terms of Service</a>
+      <a href="/privacy">Privacy</a>
+      <a href="/terms">Terms</a>
       <a href="/support">Support</a>
       <a href="mailto:hello@radius-app.org">hello@radius-app.org</a>
     </footer>
