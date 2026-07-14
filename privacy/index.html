@@ -31,10 +31,10 @@
 
       <h2>Information we collect</h2>
       <ul>
-        <li><strong>Account information:</strong> name, email address, handle, profile details, avatar, and authentication data.</li>
-        <li><strong>Community and social activity:</strong> communities joined, Signals created or joined, messages, connections, favorites, trust settings, reports, blocks, mutes, and notification preferences.</li>
+        <li><strong>Account information:</strong> name, email address, handle, profile details, avatar, authentication data, and a phone number required at registration. Radius transforms the phone number into a one-way, server-peppered lookup hash rather than storing the raw number; the hash is used for account uniqueness, abuse prevention, and any enabled contact-matching features.</li>
+        <li><strong>Community and social activity:</strong> communities joined, Signals created or joined, messages, connections, favorites, trust settings, reports, blocks, mutes, and notification preferences. Membership in an explicitly religious community can reveal religious affiliation; Radius uses that membership only to provide community functionality and does not use it for advertising or tracking.</li>
         <li><strong>Location information:</strong> approximate location or destination information when you choose to use location-based features. Radius is designed around general area discovery, not exact public location sharing.</li>
-        <li><strong>Device and usage data:</strong> app diagnostics, basic device metadata, crash/debug information, and security/rate-limit signals needed to run and protect the service.</li>
+        <li><strong>Device and usage data:</strong> operational request/error metadata, basic device metadata, and security/rate-limit signals needed to run, diagnose, and protect the service. The current app does not include a crash or performance monitoring SDK.</li>
         <li><strong>Optional permissions:</strong> camera for QR code scanning, photo library for profile/story images, calendar access when you choose to add joined Signals to your calendar, and Face ID/biometric unlock when enabled on your device.</li>
       </ul>
 
@@ -59,7 +59,7 @@
         <li>You can update profile details in the app.</li>
         <li>You can block, mute, or report users or Signals where those controls are available.</li>
         <li>You can control device permissions such as location, camera, photos, notifications, calendar, and Face ID from iOS Settings.</li>
-        <li>You can request account deletion or data assistance by contacting <a href="mailto:hello@radius-app.org?subject=Radius%20privacy%20request">hello@radius-app.org</a>.</li>
+        <li>You can delete your account directly in Radius from Profile or Settings. You can also request data assistance by contacting <a href="mailto:hello@radius-app.org?subject=Radius%20privacy%20request">hello@radius-app.org</a>.</li>
       </ul>
 
       <h2>Children</h2>
