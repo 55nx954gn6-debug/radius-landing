@@ -1,0 +1,17 @@
+{
+  "applinks": {
+    "details": [
+      {
+        "appIDs": [
+          "9JURGANQYQ.com.jcornaggia.radius"
+        ],
+        "components": [
+          {
+            "/": "/onboarding/reset-password",
+            "comment": "Open password-reset links in Radius without exposing bearer tokens to a custom URL-scheme handler."
+          }
+        ]
+      }
+    ]
+  }
+}
