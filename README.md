@@ -29,4 +29,4 @@ After deployment, run the strict live check:
 node scripts/check-aasa.mjs --live
 ```
 
-The live gate requires both endpoints to return HTTP 200 without redirects and requires the AASA response to use `Content-Type: application/json`. Do not activate `RADIUS_RESET_PASSWORD_URL` or ship the associated-domain build until the live gate passes. If GitHub Pages cannot provide the required response headers, serve the AASA endpoint from hosting that can; do not weaken the gate.
+The live gate requires both origin AASA endpoints to return HTTP 200 without redirects, validates their JSON bodies, and then verifies Apple's CDN representation is valid JSON with `apple-origin-format: json`. GitHub Pages may serve the origin artifact as `application/octet-stream`; Apple's CDN parse result is the authoritative association check. Do not activate `RADIUS_RESET_PASSWORD_URL` or ship the associated-domain build until the live gate passes.
